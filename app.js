@@ -7,9 +7,17 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'progate',
-  password: 'password',
-  database: 'list_app'
+  user: 'root',
+  password: 'No#03kkun04',
+  database: 'prograte'
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.log('error connecting: ' + err.stack);
+    return;
+  }
+  console.log('success');
 });
 
 var indexRouter = require('./routes/index');
